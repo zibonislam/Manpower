@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdmissionComponent } from './MyCom/admission/admission.component';
-import { CorporateComponent } from './MyCom/corporate/corporate.component';
 import { DepartmentComponent } from './MyCom/department/department.component';
-import { ForeignComponent } from './MyCom/foreign/foreign.component';
-import { GovtComponent } from './MyCom/govt/govt.component';
 import { HomeComponent } from './MyCom/home/home.component';
 import { LoginComponent } from './MyCom/login/login.component';
 import { RecruitmentComponent } from './MyCom/recruitment/recruitment.component';
@@ -25,10 +22,7 @@ const routes: Routes = [
   {path:"verification", component:VerificationComponent},
   {path:"signup", component:SignupComponent},
   {path:"registration", component:RegistrationComponent},
-  {path:"remittance", component:RemittanceComponent},
-  {path: "govt", component:GovtComponent},
-  {path:"corporate", component:CorporateComponent},
-  {path:"foreign", component:ForeignComponent}
+  {path:"remittance", component:RemittanceComponent}
 ];
 
 @NgModule({
