@@ -13,6 +13,9 @@ import { VerificationComponent } from './MyCom/verification/verification.compone
 import { RegistrationComponent } from './MyCom/registration/registration.component';
 import { SignupComponent } from './MyCom/signup/signup.component';
 import { RemittanceComponent } from './MyCom/remittance/remittance.component';
+import { GovtComponent } from './MyCom/govt/govt.component';
+import { CorporateComponent } from './MyCom/corporate/corporate.component';
+import { ForeignComponent } from './MyCom/foreign/foreign.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { RemittanceComponent } from './MyCom/remittance/remittance.component';
     VerificationComponent,
     RegistrationComponent,
     SignupComponent,
-    RemittanceComponent
+    RemittanceComponent,
+    GovtComponent,
+    CorporateComponent,
+    ForeignComponent
   ],
   imports: [
     BrowserModule,
