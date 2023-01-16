@@ -102,12 +102,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   
   /*-- end reset --*/
   body {
-    background: #3687ba;
+    background: #6291ae;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #c82a91, #8DC26F);
-    background: -moz-linear-gradient(to top, #c82a91, #8DC26F);
+    background: -webkit-linear-gradient(to top, #2ac8c0, #bfc26f);
+    background: -moz-linear-gradient(to top, #c9e477, #8DC26F);
     background: -o-linear-gradient(to top, #c82a92, #8DC26F);
-    background: linear-gradient(to top, #c82a91, #8DC26F);
+    background: linear-gradient(to top, #14010d, #6fb3c2);
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
@@ -139,7 +139,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     padding: 3em;
   }
   
-  input[type="text"], input[type="email"], input[type="password"],input[type="date"] {
+  input[type="text"], input[type="email"], input[type="password"] {
     font-size: 0.9em;
     color: #fff;
     font-weight: 100;
@@ -159,7 +159,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-family: 'Roboto', sans-serif;
   }
   
-  input.email, input.text.w3lpass,input.date,input.text1,input.text2,input.text3 {
+  input.email, input.text.w3lpass,input.text1,input.text2,input.text3 {
     margin: 2em 0;
   }
   
@@ -523,7 +523,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   
   /*-- responsive-design --*/
   @media(max-width:1440px) {
-    input[type="text"], input[type="email"], input[type="password"],input[type="date"] {
+    input[type="text"], input[type="email"], input[type="password"] {
       width: 94%;
     }
   }
@@ -579,7 +579,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       width: 58%;
     }
   
-    input[type="text"], input[type="email"], input[type="password"],input[type="date"] {
+    input[type="text"], input[type="email"], input[type="password"] {
       width: 93%;
     }
   }
@@ -608,7 +608,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     }
   
     input.email, input.text.w3lpass {
-      margin: 2.5em 0;
+      margin: 1.5em 0;
     }
   
     input[type="submit"] {
@@ -652,7 +652,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   
   @media(max-width:414px) {
     h1 {
-      font-size: 1em;
+      font-size: 1.8em;
       letter-spacing: 2px;
     }
   
