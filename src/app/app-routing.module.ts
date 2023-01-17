@@ -7,12 +7,16 @@ import { ForeignComponent } from './MyCom/foreign/foreign.component';
 import { GovtComponent } from './MyCom/govt/govt.component';
 import { HomeComponent } from './MyCom/home/home.component';
 import { LoginComponent } from './MyCom/login/login.component';
+import { ProfileComponent } from './MyCom/profile/profile.component';
 import { RecruitmentComponent } from './MyCom/recruitment/recruitment.component';
 import { RegistrationComponent } from './MyCom/registration/registration.component';
 import { RemittanceComponent } from './MyCom/remittance/remittance.component';
 import { SignupComponent } from './MyCom/signup/signup.component';
 import { TrainingComponent } from './MyCom/training/training.component';
+import { VapplyComponent } from './MyCom/vapply/vapply.component';
 import { VerificationComponent } from './MyCom/verification/verification.component';
+import { VstatusComponent } from './MyCom/vstatus/vstatus.component';
+import { WorkpermitComponent } from './MyCom/workpermit/workpermit.component';
 
 const routes: Routes = [
   {path:"", redirectTo:"/login",pathMatch:"full"},
@@ -28,7 +32,11 @@ const routes: Routes = [
   {path:"remittance", component:RemittanceComponent},
   {path:"govt", component:GovtComponent},
   {path:"corporate", component:CorporateComponent},
-  {path:"foreign", component:ForeignComponent}
+  {path:"foreign", component:ForeignComponent},
+  {path:"vapply", component:VapplyComponent},
+  {path:"vstatus", component:VstatusComponent},
+  {path:"workpermit", component:WorkpermitComponent},
+  {path:"profile", component:ProfileComponent}
 ];
 
 @NgModule({

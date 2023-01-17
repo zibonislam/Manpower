@@ -16,6 +16,10 @@ import { RemittanceComponent } from './MyCom/remittance/remittance.component';
 import { GovtComponent } from './MyCom/govt/govt.component';
 import { CorporateComponent } from './MyCom/corporate/corporate.component';
 import { ForeignComponent } from './MyCom/foreign/foreign.component';
+import { VapplyComponent } from './MyCom/vapply/vapply.component';
+import { VstatusComponent } from './MyCom/vstatus/vstatus.component';
+import { WorkpermitComponent } from './MyCom/workpermit/workpermit.component';
+import { ProfileComponent } from './MyCom/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { ForeignComponent } from './MyCom/foreign/foreign.component';
     RemittanceComponent,
     GovtComponent,
     CorporateComponent,
-    ForeignComponent
+    ForeignComponent,
+    VapplyComponent,
+    VstatusComponent,
+    WorkpermitComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

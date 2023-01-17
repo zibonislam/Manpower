@@ -237,7 +237,7 @@ background-image: url(https://s3.us-east-2.amazonaws.com/assets.allencountyhealt
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
-  color: rgb(248, 242, 242);
+  color: rgb(244, 247, 247);
   font-family: "Abril Fatface", sans-serif;
   line-height: 0.8;
   letter-spacing: -0.025em;
@@ -259,7 +259,7 @@ background-image: url(https://s3.us-east-2.amazonaws.com/assets.allencountyhealt
   font-size: 2vmin;
   display: inline-block;
   position: relative;
-  border: 3px solid white;
+  border: 3px solid rgb(226, 221, 221);
   box-shadow: -0.5vmin 0.5vmin 0 rgba(255, 255, 255, 0.5);
   background: transparent;
   margin-top: 5vmin;
