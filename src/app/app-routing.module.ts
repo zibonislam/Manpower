@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './MyCom/admin/admin.component';
 import { AdmissionComponent } from './MyCom/admission/admission.component';
 import { CorporateComponent } from './MyCom/corporate/corporate.component';
 import { DepartmentComponent } from './MyCom/department/department.component';
@@ -36,7 +37,8 @@ const routes: Routes = [
   {path:"vapply", component:VapplyComponent},
   {path:"vstatus", component:VstatusComponent},
   {path:"workpermit", component:WorkpermitComponent},
-  {path:"profile", component:ProfileComponent}
+  {path:"profile", component:ProfileComponent},
+  {path:"admin", component:AdminComponent}
 ];
 
 @NgModule({

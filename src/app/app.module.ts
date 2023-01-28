@@ -20,6 +20,7 @@ import { VapplyComponent } from './MyCom/vapply/vapply.component';
 import { VstatusComponent } from './MyCom/vstatus/vstatus.component';
 import { WorkpermitComponent } from './MyCom/workpermit/workpermit.component';
 import { ProfileComponent } from './MyCom/profile/profile.component';
+import { AdminComponent } from './MyCom/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ProfileComponent } from './MyCom/profile/profile.component';
     VapplyComponent,
     VstatusComponent,
     WorkpermitComponent,
-    ProfileComponent
+    ProfileComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
