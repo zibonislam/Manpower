@@ -159,6 +159,8 @@ input[type="text"], input[type="email"], input[type="password"],input[type="date
   font-family: 'Roboto', sans-serif;
 }
 
+
+
 input.email, input.text.w3lpass,input.date,input.text1,input.text2,input.text3 {
   margin: 2em 0;
 }
