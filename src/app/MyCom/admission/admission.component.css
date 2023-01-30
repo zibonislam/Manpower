@@ -139,7 +139,7 @@ h1 {
   padding: 3em;
 }
 
-input[type="text"], input[type="email"], input[type="password"],input[type="date"] {
+input[type="text"], input[type="email"], input[type="password"],input[type="date"],input[type="number"] {
   font-size: 0.9em;
   color: #fff;
   font-weight: 100;
@@ -150,8 +150,8 @@ input[type="text"], input[type="email"], input[type="password"],input[type="date
   border: solid 1px rgba(255, 255, 255, 0.37);
   -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
   transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #fff 4%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #fff 4%);
+  background: -webkit-linear-gradient(top, rgba(228, 225, 225, 0) 96%, #fff 4%);
+  background: linear-gradient(to bottom, rgba(216, 207, 207, 0) 96%, #fff 4%);
   background-position: -800px 0;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -525,7 +525,7 @@ input.checkbox:checked:after {
 
 /*-- responsive-design --*/
 @media(max-width:1440px) {
-  input[type="text"], input[type="email"], input[type="password"],input[type="date"] {
+  input[type="text"], input[type="email"], input[type="password"],input[type="date"],input[type="number"] {
     width: 94%;
   }
 }
@@ -581,7 +581,7 @@ input.checkbox:checked:after {
     width: 58%;
   }
 
-  input[type="text"], input[type="email"], input[type="password"],input[type="date"] {
+  input[type="text"], input[type="email"], input[type="password"],input[type="date"],input[type="number"] {
     width: 93%;
   }
 }
@@ -643,7 +643,7 @@ input.checkbox:checked:after {
     padding: 1.8em;
   }
 
-  input[type="text"], input[type="email"], input[type="password"] {
+  input[type="text"], input[type="email"], input[type="password"],input[type="number"] {
     width: 91%;
   }
 
@@ -719,7 +719,7 @@ input.checkbox:checked:after {
     margin: 0 0 1em;
   }
 
-  input[type="text"], input[type="email"], input[type="password"] {
+  input[type="text"], input[type="email"], input[type="password"],input[type="number"] {
     width: 89.5%;
     font-size: 0.85em;
   }
@@ -766,4 +766,23 @@ input.checkbox:checked:after {
   font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
+}
+.select{
+  font-size: 0.9em;
+  color: #fff;
+  font-weight: 100;
+  width: 94.5%;
+  display: block;
+  border: none;
+  padding: 0.8em;
+  border: solid 1px rgba(255, 255, 255, 0.37);
+  -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  background: -webkit-linear-gradient(top, rgba(228, 225, 225, 0) 96%, #fff 4%);
+  background: linear-gradient(to bottom, rgba(216, 207, 207, 0) 96%, #fff 4%);
+  background-position: -800px 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
 }
