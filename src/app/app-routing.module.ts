@@ -6,13 +6,20 @@ import { CorporateComponent } from './MyCom/corporate/corporate.component';
 import { DepartmentComponent } from './MyCom/department/department.component';
 import { ForeignComponent } from './MyCom/foreign/foreign.component';
 import { GovtComponent } from './MyCom/govt/govt.component';
+import { HeadhuntComponent } from './MyCom/headhunt/headhunt.component';
 import { HomeComponent } from './MyCom/home/home.component';
 import { LoginComponent } from './MyCom/login/login.component';
+import { OperationComponent } from './MyCom/operation/operation.component';
+import { PermitComponent } from './MyCom/permit/permit.component';
+import { PlacementComponent } from './MyCom/placement/placement.component';
 import { ProfileComponent } from './MyCom/profile/profile.component';
 import { RecruitmentComponent } from './MyCom/recruitment/recruitment.component';
 import { RegistrationComponent } from './MyCom/registration/registration.component';
 import { RemittanceComponent } from './MyCom/remittance/remittance.component';
+import { SelectionComponent } from './MyCom/selection/selection.component';
+import { ServiceComponent } from './MyCom/service/service.component';
 import { SignupComponent } from './MyCom/signup/signup.component';
+import { SupplyComponent } from './MyCom/supply/supply.component';
 import { TrainingComponent } from './MyCom/training/training.component';
 import { VapplyComponent } from './MyCom/vapply/vapply.component';
 import { VerificationComponent } from './MyCom/verification/verification.component';
@@ -38,7 +45,15 @@ const routes: Routes = [
   {path:"vstatus", component:VstatusComponent},
   {path:"workpermit", component:WorkpermitComponent},
   {path:"profile", component:ProfileComponent},
+  {path:"selection", component:SelectionComponent},
+  {path:"service", component:ServiceComponent},
+  {path:"headhunt", component:HeadhuntComponent},
+  {path:"placement",component:PlacementComponent},
+  {path:"supply", component:SupplyComponent},
+  {path:"permit", component:PermitComponent},
+  {path:"operation", component:OperationComponent},
   {path:"admin", component:AdminComponent}
+  
 ];
 
 @NgModule({

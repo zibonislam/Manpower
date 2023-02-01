@@ -21,6 +21,13 @@ import { VstatusComponent } from './MyCom/vstatus/vstatus.component';
 import { WorkpermitComponent } from './MyCom/workpermit/workpermit.component';
 import { ProfileComponent } from './MyCom/profile/profile.component';
 import { AdminComponent } from './MyCom/admin/admin.component';
+import { SelectionComponent } from './MyCom/selection/selection.component';
+import { ServiceComponent } from './MyCom/service/service.component';
+import { HeadhuntComponent } from './MyCom/headhunt/headhunt.component';
+import { PlacementComponent } from './MyCom/placement/placement.component';
+import { SupplyComponent } from './MyCom/supply/supply.component';
+import { PermitComponent } from './MyCom/permit/permit.component';
+import { OperationComponent } from './MyCom/operation/operation.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +49,14 @@ import { AdminComponent } from './MyCom/admin/admin.component';
     VstatusComponent,
     WorkpermitComponent,
     ProfileComponent,
-    AdminComponent
+    AdminComponent,
+    SelectionComponent,
+    ServiceComponent,
+    HeadhuntComponent,
+    PlacementComponent,
+    SupplyComponent,
+    PermitComponent,
+    OperationComponent
   ],
   imports: [
     BrowserModule,
