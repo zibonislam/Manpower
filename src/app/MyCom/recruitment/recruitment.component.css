@@ -82,12 +82,12 @@
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-color: #58d;
+    background-color: rgb(168, 173, 182);
     cursor: pointer;
     background-blend-mode: color-burn;
   }
   .left:hover, .center:hover, .right:hover, .lefter:hover, .righter:hover, .lefter1:hover, .righter1:hover {
-    box-shadow: 0 0 30px 10px rgba(52, 17, 181, 0.6);
+    box-shadow: 0 0 30px 10px rgba(197, 185, 239, 0.6);
     background-color: rgb(224, 234, 228);
   }
   
@@ -100,7 +100,7 @@
     position: absolute;
     will-change: transform;
     color: rgb(245, 242, 242);
-    text-shadow: 0 0 5px rgba(100, 100, 255, 0.6);
+    text-shadow: 0 0 5px rgba(246, 246, 250, 0.6);
   }.lefter1 {
     transform: translateX(-90px) translateZ(-75px) rotateY(-15deg);
     background-image: url(https://cdn2.iconfinder.com/data/icons/human-resources-soft-fill/60/Claw-Selecting-Person-selection-process-hiring-256.png);
