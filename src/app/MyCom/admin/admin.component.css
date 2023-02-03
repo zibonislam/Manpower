@@ -115,7 +115,7 @@ Sidebar Nav
   content: "";
   font-family: ionicons;
   font-size: 0.5em;
-  width: 10px;
+  width: 8px;
   color: #fff;
   position: absolute;
   right: 0.75em;
@@ -125,7 +125,7 @@ Sidebar Nav
   position: absolute;
   background-color: #080D11;
   z-index: 9;
-  left: 2.5em;
+  left: 4em;
   top: 0;
   height: 100vh;
   -webkit-transform: translateX(100%);
@@ -138,7 +138,7 @@ Sidebar Nav
   transition: all 0.5s ease;
 }
 .sidebar-nav .nav-flyout a:hover {
-  background-color: rgba(172, 19, 19, 0.05);
+  background-color: rgba(202, 183, 183, 0.05);
 }
 .sidebar-nav ul > li:hover .nav-flyout {
   -webkit-transform: translateX(0);
@@ -149,4 +149,8 @@ Sidebar Nav
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+.content-margin{
+  margin-left: 50px;
 }

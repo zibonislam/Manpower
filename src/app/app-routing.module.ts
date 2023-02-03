@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AadmissionComponent } from './MyCom/aadmission/aadmission.component';
 import { AdminComponent } from './MyCom/admin/admin.component';
 import { AdmissionComponent } from './MyCom/admission/admission.component';
 import { CorporateComponent } from './MyCom/corporate/corporate.component';
@@ -16,6 +17,9 @@ import { ProfileComponent } from './MyCom/profile/profile.component';
 import { RecruitmentComponent } from './MyCom/recruitment/recruitment.component';
 import { RegistrationComponent } from './MyCom/registration/registration.component';
 import { RemittanceComponent } from './MyCom/remittance/remittance.component';
+import { RheadhuntingComponent } from './MyCom/rheadhunting/rheadhunting.component';
+import { RplacementComponent } from './MyCom/rplacement/rplacement.component';
+import { RworkpermitComponent } from './MyCom/rworkpermit/rworkpermit.component';
 import { SelectionComponent } from './MyCom/selection/selection.component';
 import { ServiceComponent } from './MyCom/service/service.component';
 import { SignupComponent } from './MyCom/signup/signup.component';
@@ -52,8 +56,15 @@ const routes: Routes = [
   {path:"supply", component:SupplyComponent},
   {path:"permit", component:PermitComponent},
   {path:"operation", component:OperationComponent},
-  {path:"admin", component:AdminComponent}
-  
+  {path:"admin", component:AdminComponent,children:[{
+    path:"aadmission", component:AadmissionComponent
+      },
+      {path:"rheadhunting", component:RheadhuntingComponent},
+      {path:"rplacement", component:RplacementComponent},
+      {path:"rworkpermit", component:RworkpermitComponent}
+    ]
+  }
+
 ];
 
 @NgModule({

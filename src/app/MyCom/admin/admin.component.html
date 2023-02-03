@@ -19,22 +19,19 @@
        
             <ul>
               <li>
-                <a><i class="ion-bag"></i> <span>Admission</span></a>
+                <a routerLink="/admin/aadmission"><i class="ion-bag"></i> <span>Admission</span></a>
               </li>
               <li>
                 <a ><i class="ion-ios-settings"></i> <span class="">Recruitment</span></a>
                 <ul class="nav-flyout">
                   <li>
-                    <a ><i class="ion-ios-alarm-outline"></i>Selection</a>
+                    <a routerLink="/admin/rheadhunting"><i class="ion-ios-camera-outline"></i>Headhunting</a>
                   </li>
                   <li>
-                    <a ><i class="ion-ios-camera-outline"></i>Headhunting</a>
+                    <a routerLink="/admin/rplacement"><i class="ion-ios-chatboxes-outline"></i>Placement</a>
                   </li>
                   <li>
-                    <a ><i class="ion-ios-chatboxes-outline"></i>Placement</a>
-                  </li>
-                  <li>
-                    <a ><i class="ion-ios-cog-outline"></i>Work Permit</a>
+                    <a routerLink="/admin/rworkpermit"><i class="ion-ios-cog-outline"></i>Work Permit</a>
                   </li>
                 </ul>
               </li>
@@ -109,6 +106,9 @@
             </ul>
           </nav>
         </aside>
+        <div class="content-margin">
+        <router-outlet></router-outlet>
+        </div>
       </section>
     
 </body>

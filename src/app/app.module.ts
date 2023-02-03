@@ -28,6 +28,10 @@ import { PlacementComponent } from './MyCom/placement/placement.component';
 import { SupplyComponent } from './MyCom/supply/supply.component';
 import { PermitComponent } from './MyCom/permit/permit.component';
 import { OperationComponent } from './MyCom/operation/operation.component';
+import { AadmissionComponent } from './MyCom/aadmission/aadmission.component';
+import { RheadhuntingComponent } from './MyCom/rheadhunting/rheadhunting.component';
+import { RplacementComponent } from './MyCom/rplacement/rplacement.component';
+import { RworkpermitComponent } from './MyCom/rworkpermit/rworkpermit.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +60,11 @@ import { OperationComponent } from './MyCom/operation/operation.component';
     PlacementComponent,
     SupplyComponent,
     PermitComponent,
-    OperationComponent
+    OperationComponent,
+    AadmissionComponent,
+    RheadhuntingComponent,
+    RplacementComponent,
+    RworkpermitComponent
   ],
   imports: [
     BrowserModule,
