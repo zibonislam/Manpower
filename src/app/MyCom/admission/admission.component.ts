@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Admission } from 'src/app/MyModel/admission.model';
 import { AdmissionService } from 'src/app/MyService/admission.service';
 
@@ -9,50 +10,37 @@ import { AdmissionService } from 'src/app/MyService/admission.service';
   styleUrls: ['./admission.component.css']
 })
 export class AdmissionComponent implements OnInit{
-  constructor(private formBuilder:FormBuilder, private admissionService:AdmissionService){}
 
   addForm!: FormGroup;
   admission!: Admission[];
-  ngOnInit() {
-    this.addForm = this.formBuilder.group({
-      id:[''],
-      name:[''],
-      fathername:[''],
-      mothername:[''],
-      dob:[''],
-      passport:[''],
-      nid:[''],
-      email:[''],
+  constructor(
+    public admissionservice: AdmissionService,
+    private router: Router
+  ) { }
 
-    });
-    this.admissionService.getTrainee().subscribe((data:Admission[]) => {
-      this.admission = data;
+  ngOnInit(): void {
+    this.addForm = new FormGroup({
+      id: new FormControl('', [Validators.required]),
+      name: new FormControl('', Validators.required),
+      fathername: new FormControl('', Validators.required),
+      mothername: new FormControl('', Validators.required),
+      dob: new FormControl('', Validators.required),
+      passport: new FormControl('', Validators.required),
+      nid: new FormControl('', Validators.required),
+      email: new FormControl('', Validators.required),
+      
     });
     
   }
-  add(){
-    this.admissionService.saveTrainee(this.addForm.value).subscribe(data=>{this.ngOnInit();});
+  get trainee(){
+    return this.addForm.controls;
   }
-
-  deleteTrainee(trainee:Trainee): void {
-    this.admissionService.deleteTrainee(trainee.id).subscribe(data=>{this.ngOnInit();});
-  }
-
-  editTrainee(trainee:Trainee): void {
-    localStorage.setItem('editTraineeId', trainee.id.toString());
-    let traineeId = localStorage.getItem('editTraineeId');
-    
-    if(+traineeId > 0){
-      this.admissionService.getTraineeById(+traineeId).subscribe(data => {
-        this.addForm.patchValue(data);
+  
+  submit(){
+    console.log(this.addForm.value);
+    this.admissionservice.create(this.addForm.value).subscribe((res:any) => {
+         console.log('Post created successfully!');
+         this.router.navigateByUrl('post/index');
     })
-     
   }
-}
-
-update(){
-  this.admissionService.updateTrainee(this.addForm.value).subscribe(data=>{this.ngOnInit();});
-}
-
-
 }

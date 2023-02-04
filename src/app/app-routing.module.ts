@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AaadmissionComponent } from './MyCom/aaadmission/aaadmission.component';
 import { AadmissionComponent } from './MyCom/aadmission/aadmission.component';
 import { AdminComponent } from './MyCom/admin/admin.component';
 import { AdmissionComponent } from './MyCom/admission/admission.component';
@@ -56,12 +57,12 @@ const routes: Routes = [
   {path:"supply", component:SupplyComponent},
   {path:"permit", component:PermitComponent},
   {path:"operation", component:OperationComponent},
-  {path:"admin", component:AdminComponent,children:[{
-    path:"aadmission", component:AadmissionComponent
-      },
+  {path:"admin", component:AdminComponent,children:[
+      {path:"aadmission", component:AadmissionComponent},
       {path:"rheadhunting", component:RheadhuntingComponent},
       {path:"rplacement", component:RplacementComponent},
-      {path:"rworkpermit", component:RworkpermitComponent}
+      {path:"rworkpermit", component:RworkpermitComponent},
+      {path:"aaadmission", component: AaadmissionComponent}
     ]
   }
 

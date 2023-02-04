@@ -32,6 +32,9 @@ import { AadmissionComponent } from './MyCom/aadmission/aadmission.component';
 import { RheadhuntingComponent } from './MyCom/rheadhunting/rheadhunting.component';
 import { RplacementComponent } from './MyCom/rplacement/rplacement.component';
 import { RworkpermitComponent } from './MyCom/rworkpermit/rworkpermit.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AaadmissionComponent } from './MyCom/aaadmission/aaadmission.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -64,11 +67,15 @@ import { RworkpermitComponent } from './MyCom/rworkpermit/rworkpermit.component'
     AadmissionComponent,
     RheadhuntingComponent,
     RplacementComponent,
-    RworkpermitComponent
+    RworkpermitComponent,
+    AaadmissionComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

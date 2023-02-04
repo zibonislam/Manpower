@@ -21,7 +21,7 @@
 		<h1>Trainee Admission Form</h1>
 		<div class="main-agileinfo"  style="width: 1000px;">
 			<div class="agileits-top">
-				<form>
+				<form [formGroup]="addForm" (ngSubmit)="submit()" >
 					<input  class="text3" type="text" name="Trainee_id" placeholder="Trainee Id" formControlName="id" required="">
 
 					<input class="text" type="text" name="Name" placeholder="Name" formControlName="name" required="">
