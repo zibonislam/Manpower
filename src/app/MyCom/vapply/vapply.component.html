@@ -18,19 +18,19 @@
 		<h1>Verification Form</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
-				<form action="#" method="post">
-					<input class="text3" type="text" name="Apllication Id" placeholder="Application Id" required="">
-					<input class="text" type="text" name="Name" placeholder="Name" required="">
+				<form [formGroup]="addForm" (ngSubmit)="submit()">
+					<input class="text3" type="text" name="Apllication Id" placeholder="Application Id" formControlName="id" required="">
+					<input class="text" type="text" name="Name" placeholder="Name"  formControlName="name" required="">
 					
-					<input class="text1" type="text" name="Passport" placeholder="Passport" required="">
-					<input class="text2" type="text" name="NID" placeholder="NID" required="">
+					<input class="text1" type="text" name="Passport" placeholder="Passport" formControlName="passport" required="">
+					<input class="text2" type="text" name="NID" placeholder="NID" formControlName="nid" required="">
 					<div>
-						<input class="date" type="text" onfocus="(this.type='date')" placeholder="Date Of Birth"required="">
+						<input class="date" type="text" onfocus="(this.type='date')" placeholder="Date Of Birth" formControlName="dob" required="">
 					</div>
-					<input class="text email" type="email" name="email" placeholder="Email" required="">
+					<input class="text email" type="email" name="email" placeholder="Email" formControlName="email" required="">
 				
-					<input class="text" type="password" name="password" placeholder="Password" required="">
-					<input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
+					<!-- <input class="text" type="password" name="password" placeholder="Password" formControlName="pass" required=""> -->
+					<!-- <input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required=""> -->
 					<div class="wthree-text">
 						<label class="anim">
 							<input type="checkbox" class="checkbox" required="">
@@ -38,10 +38,10 @@
 						</label>
 						<div class="clear"> </div>
 					</div>
-					<input type="submit" value="SIGNUP">
+					<input type="submit" value="Verify">
 				</form>
 				<div>
-					<a routerLink="../verification"><button class="button1">Back to Home</button></a>
+					<a routerLink="../verification"><button class="button1">Back to Verification</button></a>
 				</div>
 			</div>
 		</div>

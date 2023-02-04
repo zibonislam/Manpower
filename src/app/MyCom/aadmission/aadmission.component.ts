@@ -19,10 +19,10 @@ export class AadmissionComponent implements OnInit {
     })  
   }
   deleteTrainee(id:number){
-    // this.admissionservice.delete(id).subscribe(res => {
-    //      this.trainee = this.posts.filter(item => item.id !== id);
-    //      console.log('Post deleted successfully!');
-    // })
+    this.admissionservice.delete(id).subscribe(res => {
+         this.posts = this.posts.filter(item => item.id !== id);
+         console.log('Post deleted successfully!');
+    })
   }
 
 }

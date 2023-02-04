@@ -1,6 +1,42 @@
 
 <body style="margin-left:250px ;">
-    <h1 >Admission component</h1>
-<h1>Admission component</h1><h1>Admission component</h1><h1>Admission component</h1><h1>Admission component</h1><h1>Admission component</h1><h1>Admission component</h1><h1>Admission component</h1><h1>Admission component</h1><h1>Admission component</h1><h1>Admission component</h1><h1>Admission component</h1><h1>Admission component</h1><h1>Admission component</h1>
-<h1>Admission component</h1>
+    <div class="container">
+        
+        <!-- <a href="#" routerLink="/post/create/" class="btn btn-success">Create New Post</a> -->
+          
+        <table class="table table-striped">
+            <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Father Name</th>
+                    <th>Mother Name</th>
+                    <th>Date Of Birth</th>
+                    <th>Passport</th>
+                    <th>NID</th>
+                    <th>Email</th>
+
+                    <th>Body</th>
+                    <th width="250px">Action</th>
+                  </tr>
+            </thead>
+            <tbody>
+                  <tr *ngFor="let post of posts">
+                    <td>{{ post.id }}</td>
+                    <td>{{ post.name }}</td>
+                    <td>{{ post.fathername }}</td>
+                    <td>{{ post.mothername }}</td>
+                    <td>{{ post.dob }}</td>
+                    <td>{{ post.passport }}</td>
+                    <td>{{ post.nid }}</td>
+                    <td>{{ post.email }}</td>
+                    <td>
+                      <!-- <a href="#" [routerLink]="['/post/', post.id, 'view']" class="btn btn-info">View</a>
+                      <a href="#" [routerLink]="['/post/', post.id, 'edit']" class="btn btn-primary">Edit</a> -->
+                      <button type="button" (click)="deleteTrainee(post.id)" class="btn btn-danger">Delete</button>
+                    </td>
+                  </tr>
+            </tbody>
+        </table>
+     </div>
 </body>
