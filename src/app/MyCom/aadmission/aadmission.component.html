@@ -16,7 +16,7 @@
                     <th>NID</th>
                     <th>Email</th>
 
-                    <th>Body</th>
+                    <!-- <th>Body</th> -->
                     <th width="250px">Action</th>
                   </tr>
             </thead>
@@ -31,8 +31,8 @@
                     <td>{{ post.nid }}</td>
                     <td>{{ post.email }}</td>
                     <td>
-                      <!-- <a href="#" [routerLink]="['/post/', post.id, 'view']" class="btn btn-info">View</a>
-                      <a href="#" [routerLink]="['/post/', post.id, 'edit']" class="btn btn-primary">Edit</a> -->
+                      <a routerLink="/admin/aaadmission" class="btn btn-info">Accept</a>
+                      <!-- <a href="#" [routerLink]="['/post/', post.id, 'edit']" class="btn btn-primary">Edit</a> -->
                       <button type="button" (click)="deleteTrainee(post.id)" class="btn btn-danger">Delete</button>
                     </td>
                   </tr>

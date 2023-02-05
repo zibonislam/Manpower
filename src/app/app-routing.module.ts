@@ -56,6 +56,7 @@ const routes: Routes = [
   {path:"placement",component:PlacementComponent},
   {path:"supply", component:SupplyComponent},
   {path:"permit", component:PermitComponent},
+  {path:"post/index", component:AadmissionComponent},
   {path:"operation", component:OperationComponent},
   {path:"admin", component:AdminComponent,children:[
       {path:"aadmission", component:AadmissionComponent},
