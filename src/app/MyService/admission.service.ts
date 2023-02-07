@@ -30,7 +30,7 @@ export class AdmissionService {
    */
   getAll(): Observable<any> {
   
-    return this.httpClient.get(this.apiURL + '')
+    return this.httpClient.get(this.apiURL + '/posts')
   
     .pipe(
       catchError(this.errorHandler)
@@ -85,7 +85,7 @@ export class AdmissionService {
    * @return response()
    */
   delete(id:number){
-    return this.httpClient.delete(this.apiURL + '' + id, this.httpOptions)
+    return this.httpClient.delete(this.apiURL + '/posts/' + id, this.httpOptions)
   
     .pipe(
       catchError(this.errorHandler)
