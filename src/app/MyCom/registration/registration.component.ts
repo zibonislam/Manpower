@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/MyService/auth.service';
 
 @Component({
@@ -21,10 +22,14 @@ export class RegistrationComponent implements OnInit {
 
 
 
+
   
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService,private router: Router) { }
   ngOnInit(): void {
     throw new Error('Method not implemented.');
+  }
+  get f(){
+    return this.form.controls;
   }
   onSubmit(): void {
     const { username, email, password } = this.form;
@@ -34,12 +39,14 @@ export class RegistrationComponent implements OnInit {
         console.log(data);
         this.isSuccessful = true;
         this.isSignUpFailed = false;
+        
       },
       error: err => {
         this.errorMessage = err.error.message;
         this.isSignUpFailed = true;
       }
     });
+    this.router.navigateByUrl("/login")
   }
 
 }

@@ -99,7 +99,7 @@
     left: 5px;
     position: absolute;
     will-change: transform;
-    color: rgb(245, 242, 242);
+    color: rgb(16, 15, 15);
     text-shadow: 0 0 5px rgba(246, 246, 250, 0.6);
   }.lefter1 {
     transform: translateX(-90px) translateZ(-75px) rotateY(-15deg);
