@@ -42,7 +42,9 @@ export class LoginComponent implements OnInit{
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.storageService.getUser().roles;
-        this.reloadPage();
+        // this.reloadPage();
+        this.router.navigateByUrl("/home")
+
         
       },
       error: (err: { error: { message: string; }; }) => {
@@ -51,7 +53,7 @@ export class LoginComponent implements OnInit{
       }
       
     });
-    this.router.navigateByUrl("/home")
+    
   }
 
   reloadPage(): void {
