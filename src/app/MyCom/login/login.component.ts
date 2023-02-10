@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit{
         this.isLoggedIn = true;
         this.roles = this.storageService.getUser().roles;
         // this.reloadPage();
-        
+        this.router.navigateByUrl("/home");
        
       },
       error: (err: { error: { message: string; }; }) => {
@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit{
       
      
     });
-    this.router.navigateByUrl("/home");
+    
     
     
     

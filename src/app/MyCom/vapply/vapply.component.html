@@ -18,7 +18,7 @@
 		<h1>Verification Form</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
-				<form>
+				<form [formGroup]="addForm" (ngSubmit)="verify()">
 					<input class="text3" type="text" name="Apllication Id" placeholder="Application Id" formControlName="id" required="">
 					<input class="text" type="text" name="Name" placeholder="Name"  formControlName="name" required="">
 					
