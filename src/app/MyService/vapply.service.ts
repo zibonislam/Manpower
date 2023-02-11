@@ -1,7 +1,6 @@
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, throwError } from 'rxjs';
-import { Admission } from '../MyModel/admission.model';
 import { Vapply } from '../MyModel/vapply.model';
 
 @Injectable({
@@ -9,7 +8,7 @@ import { Vapply } from '../MyModel/vapply.model';
 })
 export class VapplyService {
 
-  private apiURL = "http://localhost:8080/api";
+  private apiURL = "http://localhost:8080/verify";
 
 
   httpOptions = {
@@ -32,7 +31,7 @@ export class VapplyService {
    */
   getAll(): Observable<any> {
   
-    return this.httpClient.get(this.apiURL + '')
+    return this.httpClient.get(this.apiURL + '/verify')
   
     .pipe(
       catchError(this.errorHandler)
@@ -44,13 +43,14 @@ export class VapplyService {
    *
    * @return response()
    */
-  create(verify: VapplyService): Observable<any> {
+  create(verify: Vapply): Observable<any> {
+    console.log(verify , "-------------------------------------") 
   
-    return this.httpClient.post(this.apiURL + '/posts', JSON.stringify(verify), this.httpOptions)
+    return this.httpClient.post("http://localhost:8080/verify/posts", JSON.stringify(verify),this.httpOptions)
   
-    .pipe(
-      catchError(this.errorHandler)
-    )
+    // .pipe(
+    //   catchError(this.errorHandler)
+    // )
   }  
     
   /**
@@ -87,7 +87,7 @@ export class VapplyService {
    * @return response()
    */
   delete(id:number){
-    return this.httpClient.delete(this.apiURL + '' + id, this.httpOptions)
+    return this.httpClient.delete(this.apiURL + '/verify' + id, this.httpOptions)
   
     .pipe(
       catchError(this.errorHandler)

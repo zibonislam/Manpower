@@ -1,8 +1,8 @@
 export interface Vapply {
     id : number;
-    name: String;
-    passport: String;
-    nid: String;
-    dob: String;
-    email: String;
+    name: string;
+    passport: string;
+    nid: string;
+    dob: string;
+    email: string;
 }

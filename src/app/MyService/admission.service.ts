@@ -7,7 +7,7 @@ import { Observable, catchError, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class AdmissionService {
-  private apiURL = "http://localhost:8080/api";
+  private apiURL = "http://localhost:8080/api/admission";
 
 
   httpOptions = {
@@ -42,9 +42,9 @@ export class AdmissionService {
    *
    * @return response()
    */
-  create(post:Admission): Observable<any> {
+  create(posts:Admission): Observable<any> {
   
-    return this.httpClient.post(this.apiURL + '/posts', JSON.stringify(post), this.httpOptions)
+    return this.httpClient.post(this.apiURL + '/posts', JSON.stringify(posts), this.httpOptions)
   
     .pipe(
       catchError(this.errorHandler)

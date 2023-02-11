@@ -32,7 +32,7 @@ import { VstatusComponent } from './MyCom/vstatus/vstatus.component';
 import { WorkpermitComponent } from './MyCom/workpermit/workpermit.component';
 
 const routes: Routes = [
-  {path:"", redirectTo:"/login",pathMatch:"full"},
+  {path:"", redirectTo:"login",pathMatch:"full"},
   {path:"login", component:LoginComponent},
   {path:"home", component:HomeComponent},
   {path:"department", component:DepartmentComponent},

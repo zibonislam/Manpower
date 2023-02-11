@@ -11,11 +11,30 @@ import { VapplyService } from 'src/app/MyService/vapply.service';
 })
 export class VapplyComponent implements OnInit {
 
+  constructor(
+    public vapplyservice: VapplyService,
+    private router: Router
+  ) { }
 
-verify() {   console.log(this.addForm.value);
+  ngOnInit(): void {
+    this.addForm = new FormGroup({
+      id: new FormControl('', [Validators.required]),
+      name: new FormControl('', [Validators.required]),
+      passport: new FormControl('', [Validators.required]),
+      dob: new FormControl('', [Validators.required]),
+
+      nid: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required])
+    })
+   
+   
+  }
+
+verify() {console.log(this.addForm.value);
+  console.log(this.addForm.value)
   this.vapplyservice.create(this.addForm.value).subscribe((res:any) => {
        console.log('Post created successfully!');
-       this.router.navigateByUrl('post/index');
+       this.router.navigateByUrl('/admin');
   })
 
 }
@@ -28,22 +47,7 @@ get trainee(){
   addForm!: FormGroup;
   vapply! :Vapply[];
 
-  constructor(
-    public vapplyservice: VapplyService,
-    private router: Router
-  ) { }
-
-  ngOnInit(): void {
-    this.addForm = new FormGroup({
-      id: new FormControl('', [Validators.required]),
-      name: new FormControl('', [Validators.required]),
-      passport: new FormControl('', [Validators.required]),
-      nid: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.required])
-    })
-   
-   
-  }
+  
 
 }
 
