@@ -64,7 +64,7 @@ const routes: Routes = [
       {path:"rheadhunting", component:RheadhuntingComponent},
       {path:"rplacement", component:RplacementComponent},
       {path:"rworkpermit", component:RworkpermitComponent},
-      {path:"aaadmission", component: AaadmissionComponent}
+      {path:"aaadmission/:postId", component: AaadmissionComponent}
     ]
   }
 

@@ -24,5 +24,6 @@ export class AadmissionComponent implements OnInit {
          console.log('Post deleted successfully!');
     })
   }
+  
 
 }

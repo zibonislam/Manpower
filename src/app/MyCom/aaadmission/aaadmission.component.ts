@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Aaadmission } from 'src/app/MyModel/aaadmission.model';
 import { Admission } from 'src/app/MyModel/admission.model';
+import { AaadmissionService } from 'src/app/MyService/aaadmission.service';
 import { AdmissionService } from 'src/app/MyService/admission.service';
 
 @Component({
@@ -10,27 +12,50 @@ import { AdmissionService } from 'src/app/MyService/admission.service';
   styleUrls: ['./aaadmission.component.css']
 })
 export class AaadmissionComponent implements OnInit {
-  
   id!: number;
-  post!: Post;
-  form!: FormGroup;
+  admissions!: Admission;
 
-
-  constructor( public admissionservice: AdmissionService,
-    private route: ActivatedRoute,
-    private router: Router){}
+  addForm!: FormGroup;
+  admission!: Admission[];
+  constructor(
+    public admissionservice: AdmissionService,
+    public aaadmissionservice : AaadmissionService,
+    private router: Router,
+    public route : ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['postId'];
-    this.admissionservice.find(this.id).subscribe((data: Post)=>{
-      this.post = data;
-    }); 
+    this.addForm = new FormGroup({
+      id: new FormControl('', [Validators.required]),
+      name: new FormControl('', Validators.required),
+      fathername: new FormControl('', Validators.required),
+      mothername: new FormControl('', Validators.required),
+      dob: new FormControl('', Validators.required),
+      passport: new FormControl('', Validators.required),
+      nid: new FormControl('', Validators.required),
+      email: new FormControl('', Validators.required),
+      training: new FormControl('', Validators.required),
+      company: new FormControl('', Validators.required),
+      country: new FormControl('', Validators.required),
+
       
-    this.form = new FormGroup({
-      title: new FormControl('', [Validators.required]),
-      body: new FormControl('', Validators.required)
     });
+    this.id = this.route.snapshot.params['postId'];
+    this.admissionservice.find(this.id).subscribe((data: Admission)=>{
+      this.admissions = data;
+    }); 
     
+  }
+  get trainee(){
+    return this.addForm.controls;
+  }
+  
+  update(){
+    console.log(this.addForm.value);
+    this.aaadmissionservice.create(this.addForm.value).subscribe((res:any) => {
+         console.log('Post created successfully!');
+        //  this.router.navigateByUrl('post/index');
+    })
   }
 
 }
