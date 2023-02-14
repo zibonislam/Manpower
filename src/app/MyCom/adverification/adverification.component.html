@@ -1,0 +1,40 @@
+
+<body style="margin-left: 250px;">
+    <div class="container">
+        
+        <!-- <a href="#" routerLink="/post/create/" class="btn btn-success">Create New Post</a> -->
+          
+        <table class="table table-striped">
+            <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Date Of Birth</th>
+                    <th>Passport</th>
+                    <th>NID</th>
+                    <th>Email</th>
+
+                    <!-- <th>Body</th> -->
+                    <th width="250px">Action</th>
+                  </tr>
+            </thead>
+            <tbody>
+                  <tr *ngFor="let verify of verification">
+                    <td>{{ verify.id }}</td>
+                    <td>{{ verify.name }}</td>  
+                    <td>{{ verify.dob }}</td>
+                    <td>{{ verify.passport }}</td>
+                    <td>{{ verify.nid }}</td>
+                    <td>{{ verify.email }}</td>
+                    <td>
+                      <!-- <a routerLink="/admin/aaadmission" class="btn btn-info">Accept</a> -->
+                      <button [routerLink]="['/admin/','adverifyupdate', verify.id]" class="btn btn-primary">Edit</button>
+
+                      <!-- <a href="#" [routerLink]="['/post/', post.id, 'edit']" class="btn btn-primary">Edit</a> -->
+                      <button type="button" (click)="deleteTrainee(verify.id)" class="btn btn-danger">Delete</button>
+                    </td>
+                  </tr>
+            </tbody>
+        </table>
+     </div>
+</body>

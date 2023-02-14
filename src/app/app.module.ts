@@ -35,6 +35,9 @@ import { RworkpermitComponent } from './MyCom/rworkpermit/rworkpermit.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AaadmissionComponent } from './MyCom/aaadmission/aaadmission.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AdverificationComponent } from './MyCom/adverification/adverification.component';
+import { AdverifyupdateComponent } from './MyCom/adverifyupdate/adverifyupdate.component';
+
 
 @NgModule({
   declarations: [
@@ -68,7 +71,10 @@ import { HttpClientModule } from '@angular/common/http';
     RheadhuntingComponent,
     RplacementComponent,
     RworkpermitComponent,
-    AaadmissionComponent
+    AaadmissionComponent,
+    AdverificationComponent,
+    AdverifyupdateComponent
+    
   ],
   imports: [
     BrowserModule,

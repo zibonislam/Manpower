@@ -10,6 +10,8 @@ import { VapplyService } from 'src/app/MyService/vapply.service';
   styleUrls: ['./vapply.component.css']
 })
 export class VapplyComponent implements OnInit {
+  addForm!: FormGroup;
+  vapply! :Vapply[];
 
   constructor(
     public vapplyservice: VapplyService,
@@ -34,7 +36,7 @@ verify() {console.log(this.addForm.value);
   console.log(this.addForm.value)
   this.vapplyservice.create(this.addForm.value).subscribe((res:any) => {
        console.log('Post created successfully!');
-       this.router.navigateByUrl('/admin');
+       this.router.navigateByUrl('/admin/adverification');
   })
 
 }
@@ -44,8 +46,7 @@ get trainee(){
 }
 
 
-  addForm!: FormGroup;
-  vapply! :Vapply[];
+  
 
   
 

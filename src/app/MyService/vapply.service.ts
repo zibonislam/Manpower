@@ -8,7 +8,7 @@ import { Vapply } from '../MyModel/vapply.model';
 })
 export class VapplyService {
 
-  private apiURL = "http://localhost:8080/verify";
+  private apiURL = "http://localhost:8080/api/verify";
 
 
   httpOptions = {
@@ -31,7 +31,7 @@ export class VapplyService {
    */
   getAll(): Observable<any> {
   
-    return this.httpClient.get(this.apiURL + '/verify')
+    return this.httpClient.get(this.apiURL + '/posts')
   
     .pipe(
       catchError(this.errorHandler)
@@ -46,7 +46,7 @@ export class VapplyService {
   create(verify: Vapply): Observable<any> {
     console.log(verify , "-------------------------------------") 
   
-    return this.httpClient.post("http://localhost:8080/verify/posts", JSON.stringify(verify),this.httpOptions)
+    return this.httpClient.post("http://localhost:8080/api/verify/posts", JSON.stringify(verify),this.httpOptions)
   
     // .pipe(
     //   catchError(this.errorHandler)
@@ -60,7 +60,7 @@ export class VapplyService {
    */
   find(id:number): Observable<any> {
   
-    return this.httpClient.get(this.apiURL + '/verify/' + id)
+    return this.httpClient.get(this.apiURL + '/posts' + id)
   
     .pipe(
       catchError(this.errorHandler)
@@ -74,7 +74,7 @@ export class VapplyService {
    */
   update(id:number, verify:Vapply): Observable<any> {
   
-    return this.httpClient.put(this.apiURL + '/verify/' + id, JSON.stringify(verify), this.httpOptions)
+    return this.httpClient.put(this.apiURL + '/posts' + id, JSON.stringify(verify), this.httpOptions)
  
     .pipe( 
       catchError(this.errorHandler)
@@ -87,7 +87,7 @@ export class VapplyService {
    * @return response()
    */
   delete(id:number){
-    return this.httpClient.delete(this.apiURL + '/verify' + id, this.httpOptions)
+    return this.httpClient.delete(this.apiURL + '/posts/' + id, this.httpOptions)
   
     .pipe(
       catchError(this.errorHandler)

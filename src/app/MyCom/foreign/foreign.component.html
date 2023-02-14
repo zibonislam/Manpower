@@ -18,26 +18,24 @@
 		<h1>Foreign Training</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
-				<form action="#" method="post">
+				<div method="post">
                    
-					<input class="text" type="text" name="Trainee Id" placeholder="Trainee ID" required="">
-                    <input type="submit" value="Search">
-
-					<input class="text" type="text" name="Trainee_Name" placeholder="Trainee Name" required="">
-					<input class="text1" type="text" name="NID" placeholder="NID" required="">
-					<input class="text2" type="text" name="Company" placeholder="Company Name" required="">
-					<input class="text3" type="text" name="Training" placeholder="Assigned training" required="">
-                    <input class="text4" type="text" name="Country" placeholder="Country Name" required="">
-
-                    <div class="wthree-text">
-						<label class="anim">
-							<input type="checkbox" class="checkbox" required="">
-							<span>     I Agree To The Terms & Conditions</span>
-						</label>
-						<div class="clear"> </div>
+					<input class="text" type="text" name="Trainee Id" placeholder="Trainee ID" [(ngModel)]="id" required="">
+                    <input type="submit" value="Search" (click)="search()">
+				</div>
+				<div *ngIf="aaadmission">
+					<div>
+						<input [(ngModel)]="aaadmission.name" class="text" type="text" name="Trainee_Name" placeholder="Trainee Name" required="">
+						<input [(ngModel)]="aaadmission.nid" class="text1" type="text" name="NID" placeholder="NID" required="">
+						<input [(ngModel)]="aaadmission.training" class="text2" type="text" name="Training" placeholder="Assigned training" required="">
+						<input [(ngModel)]="aaadmission.company" class="text2" type="text" name="Training" placeholder="Comapne name" required="">
+						<input [(ngModel)]="aaadmission.country" class="text2" type="text" name="Training" placeholder="Country name" required="">
+						<div class="wthree-text">
+							<div class="clear"> </div>
+						</div>
+						<input type="submit" value="Proceed to Payment">
 					</div>
-					<input type="submit" value="Proceed to Payment">
-				</form>
+				</div>
 				<div>
 					<a routerLink="../home"><button class="button1">Back to Home</button></a>
 				</div>
@@ -62,6 +60,7 @@
 		</ul>
 	</div>
 	<!-- //main -->
+
+	
 </body>
 </html>
-
