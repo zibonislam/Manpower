@@ -37,6 +37,8 @@ import { AaadmissionComponent } from './MyCom/aaadmission/aaadmission.component'
 import { HttpClientModule } from '@angular/common/http';
 import { AdverificationComponent } from './MyCom/adverification/adverification.component';
 import { AdverifyupdateComponent } from './MyCom/adverifyupdate/adverifyupdate.component';
+import { PaymentComponent } from './MyCom/payment/payment.component';
+import { AdpaymentComponent } from './MyCom/adpayment/adpayment.component';
 
 
 @NgModule({
@@ -73,7 +75,9 @@ import { AdverifyupdateComponent } from './MyCom/adverifyupdate/adverifyupdate.c
     RworkpermitComponent,
     AaadmissionComponent,
     AdverificationComponent,
-    AdverifyupdateComponent
+    AdverifyupdateComponent,
+    PaymentComponent,
+    AdpaymentComponent
     
   ],
   imports: [

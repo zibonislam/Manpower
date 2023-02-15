@@ -6,5 +6,5 @@ export interface Traineeverification {
     dob: String;
     email: String;
     trainee_status: String;
-    permit_status: String;
+    work_permit: String;
 }

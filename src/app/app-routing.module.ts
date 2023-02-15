@@ -14,6 +14,7 @@ import { HeadhuntComponent } from './MyCom/headhunt/headhunt.component';
 import { HomeComponent } from './MyCom/home/home.component';
 import { LoginComponent } from './MyCom/login/login.component';
 import { OperationComponent } from './MyCom/operation/operation.component';
+import { PaymentComponent } from './MyCom/payment/payment.component';
 import { PermitComponent } from './MyCom/permit/permit.component';
 import { PlacementComponent } from './MyCom/placement/placement.component';
 import { ProfileComponent } from './MyCom/profile/profile.component';
@@ -51,7 +52,7 @@ const routes: Routes = [
   {path:"vapply", component:VapplyComponent},
   {path:"vstatus", component:VstatusComponent},
   {path:"workpermit", component:WorkpermitComponent},
-  {path:"profile", component:ProfileComponent},
+  {path:"post/profile", component:ProfileComponent},
   {path:"selection", component:SelectionComponent},
   {path:"service", component:ServiceComponent},
   {path:"headhunt", component:HeadhuntComponent},
@@ -60,6 +61,7 @@ const routes: Routes = [
   {path:"permit", component:PermitComponent},
   {path:"post/index", component:AadmissionComponent},
   {path:"operation", component:OperationComponent},
+  {path:"payment/index", component:PaymentComponent},
   {path:"admin", component:AdminComponent,
     children:[
       {path:"aadmission", component:AadmissionComponent},

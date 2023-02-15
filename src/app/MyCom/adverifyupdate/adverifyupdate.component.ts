@@ -50,7 +50,7 @@ export class AdverifyupdateComponent implements OnInit {
         nid: new FormControl(this.verifications.nid),
         email: new FormControl(this.verifications.email),
         trainee_status: new FormControl(),
-        permit_status: new FormControl(),
+        work_permit: new FormControl(),
         
       });
     }); 

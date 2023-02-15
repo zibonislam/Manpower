@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-<body>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-
-    <div class="multi-button">
-        <a routerLink="../vapply"><button><i class="fas fa-cut"></i> Apply For Verification</button></a>
-        <a routerLink="../vstatus"> <button><i class="fas fa-copy"></i> Verification & Permit Status</button></a>
-         <a routerLink="../workpermit"> <button><i class="fas fa-paste"></i> Payment</button></a>
-    </div>
-    <div ><button routerLink="../home" class="btn btn-primary">Back to Home</button></div>
-                          
+<body >
+    <ul>
+        <li><a routerLink="/vapply">Apply For verification</a></li>
+        <li><a routerLink="/vstatus">Verification and Permit Status</a></li>
+        <li><a routerLink="/payment/index">Payment</a></li>
+        
+        <button class="btn btn-primary" routerLink="/home"> Back to Home</button>
+      </ul>
+      
 </body>
 </html>

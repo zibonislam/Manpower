@@ -1,50 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
 body {
-    height: 100vh;
-    margin: 0;
-    display: grid;
-    place-items: center;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    background: linear-gradient(90deg, #bb1d89 0%, #6880a8 100%);
-  }
-  button{
-    font-size: 5vmin;
-    padding: .5em 1em;
-    background: #fff;
-    color: #4A5568;
-    border: 0px solid #A0AEC0;
-    margin: .1em;
-    transition:  .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease;
-    box-shadow: 0 0 0 #BEE3F8;
-    transform: translateY(0);
-  }
-  button:first-of-type{
-    border-radius: .5em 0 0 .5em;
-  }
-  button:last-of-type{
-    border-radius: 0 .5em .5em 0;
-  }
-  button i{
-    color: #A0AEC0;
-    margin-right: .3em;
-    transition: all .2s ease-out;
-  }
-  .multi-button:hover button{
-    color: #A0AEC0;
-  }
-  
-  .multi-button:hover button:hover{
-    background: #D53F8C;
-    color: #fff;
-    box-shadow: 0 0 0.8em 0 rgba(213, 63, 140, .8);
-    transform: translateY(-.2em);
-  }
-  .multi-button:hover button i{
-    color: #CBD5E0;
-  }
-  .multi-button:hover button:hover i{
-    color: #FED7E2;
-    transform: rotate(-10deg);
-  }
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #4d555e;
+  background-image: url(https://mitrasolusioptimalindo.com/wp-content/uploads/2020/08/Image-MSO-5.jpg);
+}
 
- 
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  list-style-type: none;
+}
+ul li {
+  padding: 6px 0;
+}
+ul li a {
+  --fill-color: #1e63db;
+  position: relative;
+  display: block;
+  padding: 4px 0;
+  font: 700 3rem Raleway, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px var(--fill-color);
+  background: linear-gradient(var(--fill-color) 0 100%) left/0 no-repeat;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  transition: 0.5s linear;
+}
+ul li a:hover {
+  background-size: 100%;
+}

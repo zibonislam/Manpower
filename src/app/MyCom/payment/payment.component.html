@@ -1,0 +1,87 @@
+<div style="background-image: url(https://www.digitaloutlook.com.au/wp-content/uploads/2017/09/future_payment_methods-compressor-1.jpg);height:800px;">
+
+  <div class="mb-4">
+
+      <h1 style="margin-left: 240px;text-align: center;color: brown;"> Payment</h1>
+ 
+      
+  </div>
+
+<div class="row">
+
+  <div class="col-md-8">
+      
+    <form [formGroup]="addForm" (ngSubmit)="submit()">
+      <div class="card p-3">
+
+          <h6 class="text-uppercase">Payment details</h6>
+          <div class="inputbox mt-3"> <input type="text" name="name" class="form-control" required="required" formControlName="name"> <span>Name on card</span> </div>
+
+
+          <div class="row">
+
+              <div class="col-md-6">
+
+                  <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required" formControlName="number"> <i class="fa fa-credit-card"></i> <span>Card Number</span> 
+
+                  </div>
+                  
+              </div>
+
+              <div class="col-md-6">
+
+                   <div class="d-flex flex-row">
+
+                       <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="" required="required" onfocus="(this.type='date')" formControlName="expiry" placeholder="Expiry Date"> </div>
+
+                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required" formControlName="cvc"> <span>CVV</span> </div>                     
+                   </div>
+                  </div>             
+          </div>
+          <div class="mt-4 mb-4">
+
+              <h6 class="text-uppercase">Billing Address</h6>
+              <div class="row mt-3">
+
+                  <div class="col-md-6">
+
+                      <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required" formControlName="city"> <span>City</span> </div>
+                  </div>
+                   <div class="col-md-6">
+
+                      <div class="inputbox mt-3 mr-2">
+                         <input type="text" name="name" class="form-control" required="required" formControlName="zipcode"> <span>Zip code</span> 
+                      </div>                   
+                 </div>                  
+
+              </div>
+          </div>
+      </div>
+   <div class="mt-4 mb-4 d-flex justify-content-between">              
+              <input type="submit" value="submit" (click)="print()">
+                            </div>
+</form>
+  </div>
+
+  <div class="col-md-4">
+
+      <div class="card card-blue p-3 text-white mb-3">
+
+         <span>You have to pay</span>
+          <div class="d-flex flex-row align-items-end mb-3">
+              <h1 class="mb-0 yellow">$149</h1> <span>.99</span>
+          </div>
+
+          <span>Contact the Office after you complete the payment</span>
+          <a class="yellow decoration">Know all the Rules and regulations</a>
+
+         
+          
+      </div>
+      
+  </div>
+  
+</div>
+
+
+</div>

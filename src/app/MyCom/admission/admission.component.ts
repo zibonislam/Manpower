@@ -42,7 +42,7 @@ export class AdmissionComponent implements OnInit{
     console.log(this.addForm.value);
     this.admissionservice.create(this.addForm.value).subscribe((res:any) => {
          console.log('Post created successfully!');
-         this.router.navigateByUrl('post/index');
+        //  this.router.navigateByUrl('post/index');
     })
   }
 }

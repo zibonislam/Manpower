@@ -1,13 +1,14 @@
-import { Injectable } from '@angular/core';
-import { Admission } from '../MyModel/admission.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, catchError, throwError } from 'rxjs';
-import Swal from 'sweetalert2';
+import { Injectable } from '@angular/core';
+import { catchError, Observable, throwError } from 'rxjs';
+import { Payment } from '../MyModel/payment.model';
+
 @Injectable({
   providedIn: 'root'
 })
-export class AdmissionService {
-  private apiURL = "http://localhost:8080/api/admission";
+export class PaymentService {
+
+  private apiURL = "http://localhost:8080/api/payment";
 
 
   httpOptions = {
@@ -42,9 +43,9 @@ export class AdmissionService {
    *
    * @return response()
    */
-  create(posts:Admission): Observable<any> {
+  create(post:Payment): Observable<any> {
   
-    return this.httpClient.post(this.apiURL + '/posts', JSON.stringify(posts), this.httpOptions)
+    return this.httpClient.post(this.apiURL + '/posts/', JSON.stringify(post), this.httpOptions)
   
     .pipe(
       catchError(this.errorHandler)
@@ -70,7 +71,7 @@ export class AdmissionService {
    *
    * @return response()
    */
-  update(id:number, post:Admission): Observable<any> {
+  update(id:number, post:Payment): Observable<any> {
   
     return this.httpClient.put(this.apiURL + '/posts/' + id, JSON.stringify(post), this.httpOptions)
  
@@ -106,14 +107,4 @@ export class AdmissionService {
     }
     return throwError(errorMessage);
  }
- getById(id:number): Observable<any> {
-  
-  return this.httpClient.get(this.apiURL + '/get/'  + id)
-
-  .pipe(
-    catchError(this.errorHandler)
-  )
-}
-
-
 }

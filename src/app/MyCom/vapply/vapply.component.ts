@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Vapply } from 'src/app/MyModel/vapply.model';
 import { VapplyService } from 'src/app/MyService/vapply.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-vapply',
@@ -33,10 +34,11 @@ export class VapplyComponent implements OnInit {
   }
 
 verify() {console.log(this.addForm.value);
+  Swal.fire('Success!', 'Your request has been processed.', 'success');
   console.log(this.addForm.value)
   this.vapplyservice.create(this.addForm.value).subscribe((res:any) => {
        console.log('Post created successfully!');
-       this.router.navigateByUrl('/admin/adverification');
+      //  this.router.navigateByUrl('/admin/adverification');
   })
 
 }
