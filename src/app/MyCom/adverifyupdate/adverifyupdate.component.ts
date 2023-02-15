@@ -42,6 +42,17 @@ export class AdverifyupdateComponent implements OnInit {
     this.id = this.route.snapshot.params['traineeId'];
     this.verificationservice.find(this.id).subscribe((data: Vapply)=>{
       this.verifications = data;
+      this.addForm = new FormGroup({
+        id: new FormControl(),
+        name: new FormControl(this.verifications.name),
+        dob: new FormControl(this.verifications.dob),
+        passport: new FormControl(this.verifications.passport),
+        nid: new FormControl(this.verifications.nid),
+        email: new FormControl(this.verifications.email),
+        trainee_status: new FormControl(),
+        permit_status: new FormControl(),
+        
+      });
     }); 
   }
   get trainee(){

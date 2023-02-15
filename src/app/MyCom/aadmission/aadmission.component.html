@@ -32,7 +32,7 @@
                     <td>{{ post.email }}</td>
                     <td>
                       <!-- <a routerLink="/admin/aaadmission" class="btn btn-info">Accept</a> -->
-                      <button [routerLink]="['/admin/','aaadmission', post.id]">Edit</button>
+                      <button class="btn btn-primary" [routerLink]="['/admin/','aaadmission', post.id]">Edit</button>
 
                       <!-- <a href="#" [routerLink]="['/post/', post.id, 'edit']" class="btn btn-primary">Edit</a> -->
                       <button type="button" (click)="deleteTrainee(post.id)" class="btn btn-danger">Delete</button>

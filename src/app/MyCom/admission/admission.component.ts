@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { Admission } from 'src/app/MyModel/admission.model';
 import { AdmissionService } from 'src/app/MyService/admission.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-admission',
@@ -37,6 +38,7 @@ export class AdmissionComponent implements OnInit{
   }
   
   submit(){
+    Swal.fire('Success!', 'Your request has been processed.', 'success');
     console.log(this.addForm.value);
     this.admissionservice.create(this.addForm.value).subscribe((res:any) => {
          console.log('Post created successfully!');

@@ -18,7 +18,7 @@ export class AaadmissionService {
 
   update(id:number, post:Aaadmission): Observable<any> {
   
-    return this.httpClient.put(this.apiURL + '/trainee/update/posts/' + id, JSON.stringify(post), this.httpOptions)
+    return this.httpClient.put(this.apiURL + '/update/posts/' + id, JSON.stringify(post), this.httpOptions)
  
     .pipe( 
       catchError(this.errorHandler)
@@ -26,7 +26,7 @@ export class AaadmissionService {
   }
   getAll(): Observable<any> {
   
-    return this.httpClient.get(this.apiURL + '/trainee/update/posts')
+    return this.httpClient.get(this.apiURL + '/update/posts')
   
     .pipe(
       catchError(this.errorHandler)
@@ -35,7 +35,7 @@ export class AaadmissionService {
 
   create(posts:Aaadmission): Observable<any> {
   
-    return this.httpClient.post(this.apiURL + '/trainee/update/posts', JSON.stringify(posts), this.httpOptions)
+    return this.httpClient.post(this.apiURL + '/update/posts', JSON.stringify(posts), this.httpOptions)
   
     .pipe(
       catchError(this.errorHandler)

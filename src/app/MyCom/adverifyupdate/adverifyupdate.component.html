@@ -4,26 +4,26 @@
       <!-- main -->
       <div class="main-w3layouts wrapper">
         <h1>Trainee Verification Form</h1>
-        <div class="main-agileinfo"  style="width: 900px;">
+        <!-- <div class="main-agileinfo"  style="grid-auto-columns: auto;"> -->
           <div class="agileits-top">
             <form [formGroup]="addForm" (ngSubmit)="update()" >
               <!-- <input  class="text3" type="text" name="Trainee_id" placeholder="Trainee Id" formControlName="id" required="" [(ngModel)]="post.id
               "> -->
     
-              <input class="text" type="text" name="Name" placeholder="Name" formControlName="name" required="" [(ngModel)]="verifications.name">
+              <input class="text" type="text" name="Name" placeholder="Name" formControlName="name" required="" >
 
-              <input class="text1" type="text" name="Passport" placeholder="Passport" formControlName="passport" required="" [(ngModel)]="verifications.passport">
+              <input class="text1" type="text" name="Passport" placeholder="Passport" formControlName="passport" required="">
 
                  
-              <input class="text2" type="text" name="NID" placeholder="NID" formControlName="nid" required=""[(ngModel)]="verifications.nid">
+              <input class="text2" type="text" name="NID" placeholder="NID" formControlName="nid" required="">
                
     
               <div>
-                <input class="date" type="text" onfocus="(this.type='date')" placeholder="Date Of Birth"  formControlName="dob"required="" [(ngModel)]="verifications.dob">
+                <input class="date" type="text" onfocus="(this.type='date')" placeholder="Date Of Birth"  formControlName="dob"required="" >
               </div>
     
  
-              <input class="text email" type="email" name="email" placeholder="Email" formControlName="email" required="" [(ngModel)]="verifications.email">
+              <input class="text email" type="email" name="email" placeholder="Email" formControlName="email" required="" >
 
               <input class="text1" type="text" name="Trainingname" placeholder="Training status" formControlName="trainee_status" required="">
               
@@ -33,15 +33,13 @@
               
     
               <div>
-                <button value="update">update</button>
+                <button class="button1" value="update">update</button>
               </div>
             </form>
-            <div>
-              <a routerLink="../home"><button class="button1">Back to Home</button></a>
-            </div>
+           
           </div>
         </div>
        
-      </div>
+      <!-- </div> -->
   
   </body>

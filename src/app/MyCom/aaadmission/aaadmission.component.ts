@@ -43,6 +43,20 @@ export class AaadmissionComponent implements OnInit {
     this.id = this.route.snapshot.params['postId'];
     this.admissionservice.find(this.id).subscribe((data: Admission)=>{
       this.admissions = data;
+
+      this.addForm = new FormGroup({
+        id: new FormControl(),
+        name: new FormControl(this.admissions.name),
+        fathername: new FormControl(this.admissions.fathername),
+        mothername: new FormControl(this.admissions.mothername),
+        dob: new FormControl(this.admissions.dob),
+        passport: new FormControl(this.admissions.passport),
+        nid: new FormControl(this.admissions.nid),
+        email: new FormControl(this.admissions.email),
+        training: new FormControl(),
+        company: new FormControl(),
+        country: new FormControl()
+      });
     }); 
     
   }
@@ -51,7 +65,7 @@ export class AaadmissionComponent implements OnInit {
   }
   
   update(){
-    console.log(this.addForm.value);
+    console.log('Update---', this.addForm.value)
     this.aaadmissionservice.create(this.addForm.value).subscribe((res:any) => {
          console.log('Post created successfully!');
         //  this.router.navigateByUrl('post/index');

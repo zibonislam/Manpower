@@ -33,7 +33,7 @@ export class AdverifyupdateService {
   }
   create(posts:Traineeverification): Observable<any> {
   
-    return this.httpClient.post(this.apiURL + '/update/posts', JSON.stringify(posts), this.httpOptions)
+    return this.httpClient.post(this.apiURL + '/trainee/update/posts/', JSON.stringify(posts), this.httpOptions)
   
     .pipe(
       catchError(this.errorHandler)

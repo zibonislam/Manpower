@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Admission } from '../MyModel/admission.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, catchError, throwError } from 'rxjs';
-
+import Swal from 'sweetalert2';
 @Injectable({
   providedIn: 'root'
 })
@@ -106,4 +106,6 @@ export class AdmissionService {
     }
     return throwError(errorMessage);
  }
+
+
 }

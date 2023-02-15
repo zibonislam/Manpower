@@ -60,7 +60,7 @@ export class VapplyService {
    */
   find(id:number): Observable<any> {
   
-    return this.httpClient.get(this.apiURL + '/posts' + id)
+    return this.httpClient.get(this.apiURL + '/posts/' + id)
   
     .pipe(
       catchError(this.errorHandler)
@@ -74,7 +74,7 @@ export class VapplyService {
    */
   update(id:number, verify:Vapply): Observable<any> {
   
-    return this.httpClient.put(this.apiURL + '/posts' + id, JSON.stringify(verify), this.httpOptions)
+    return this.httpClient.put(this.apiURL + '/posts/' + id, JSON.stringify(verify), this.httpOptions)
  
     .pipe( 
       catchError(this.errorHandler)
