@@ -5,6 +5,7 @@ import { Aaadmission } from 'src/app/MyModel/aaadmission.model';
 import { Admission } from 'src/app/MyModel/admission.model';
 import { AaadmissionService } from 'src/app/MyService/aaadmission.service';
 import { AdmissionService } from 'src/app/MyService/admission.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-aaadmission',
@@ -65,6 +66,7 @@ export class AaadmissionComponent implements OnInit {
   }
   
   update(){
+    Swal.fire('Update Successfull!', 'Your request has been processed.', 'success');
     console.log('Update---', this.addForm.value)
     this.aaadmissionservice.create(this.addForm.value).subscribe((res:any) => {
          console.log('Post created successfully!');

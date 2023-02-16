@@ -4,6 +4,7 @@ import { AaadmissionComponent } from './MyCom/aaadmission/aaadmission.component'
 import { AadmissionComponent } from './MyCom/aadmission/aadmission.component';
 import { AdminComponent } from './MyCom/admin/admin.component';
 import { AdmissionComponent } from './MyCom/admission/admission.component';
+import { AdpaymentComponent } from './MyCom/adpayment/adpayment.component';
 import { AdverificationComponent } from './MyCom/adverification/adverification.component';
 import { AdverifyupdateComponent } from './MyCom/adverifyupdate/adverifyupdate.component';
 import { CorporateComponent } from './MyCom/corporate/corporate.component';
@@ -71,6 +72,7 @@ const routes: Routes = [
       {path:"aaadmission/:postId", component: AaadmissionComponent},
       {path:"adverification", component: AdverificationComponent},
       {path:"adverifyupdate/:traineeId", component: AdverifyupdateComponent},
+      {path:"adpayment", component:AdpaymentComponent}
     ]
   }
 

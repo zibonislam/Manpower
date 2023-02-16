@@ -1,1 +1,41 @@
-<p>adpayment works!</p>
+
+<body style="margin-left:250px ;">
+    <div class="container">
+        
+        <!-- <a href="#" routerLink="/post/create/" class="btn btn-success">Create New Post</a> -->
+          
+        <table class="table table-striped">
+            <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Card Number</th>
+                    <th>Expiry Date</th>
+                    <th>CCV </th>
+                    <th>City </th>
+                    <th>Zipcode </th>
+
+                    <!-- <th>Body</th> -->
+                    <th width="250px">Action</th>
+                  </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let payment of payment">
+                    <td>{{ payment.id }}</td>
+                    <td>{{ payment.name }}</td>
+                    <td>{{ payment.number }}</td>
+                    <td>{{ payment.expiry }}</td>
+                    <td>{{ payment.cvc }}</td>
+                    <td>{{ payment.city }}</td>
+                    <td>{{ payment.zipcode }}</td>
+                    <td>
+            
+
+                      <!-- <a href="#" [routerLink]="['/post/', post.id, 'edit']" class="btn btn-primary">Edit</a> -->
+                      <button type="button" (click)="delete(payment.id)" class="btn btn-danger">Delete</button>
+                    </td>
+                  </tr>
+            </tbody>
+        </table>
+     </div>
+</body>

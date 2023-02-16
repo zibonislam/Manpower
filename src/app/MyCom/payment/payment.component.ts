@@ -14,6 +14,7 @@ export class PaymentComponent implements OnInit {
 
   addForm!: FormGroup;
   payment!: Payment[];
+buttonClicked: any;
 
   constructor(
     public paymentservice: PaymentService,
