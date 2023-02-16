@@ -53,7 +53,7 @@ const routes: Routes = [
   {path:"vapply", component:VapplyComponent},
   {path:"vstatus", component:VstatusComponent},
   {path:"workpermit", component:WorkpermitComponent},
-  {path:"post/profile", component:ProfileComponent},
+  {path:"profile", component:ProfileComponent},
   {path:"selection", component:SelectionComponent},
   {path:"service", component:ServiceComponent},
   {path:"headhunt", component:HeadhuntComponent},

@@ -4,7 +4,7 @@
     <h1>Trainee Admission Form</h1>
     <!-- main -->
     <div class="main-w3layouts wrapper">
-        <div class="agileits-top">
+        <!-- <div class="agileits-top"> -->
           <form [formGroup]="addForm" (ngSubmit)="update()" >
             
             <input class="text" type="text" name="Name" placeholder="Name" formControlName="name" required="">
@@ -28,10 +28,10 @@
             <input class="text2" type="text" name="CountryName" placeholder="Country Name" formControlName="country" required="">
 
             <div>
-              <button class="button1"  value="update">update</button>
+              <button class="btn btn-success"  value="update">update</button>
             </div>
           </form>
-          </div>
+          <!-- </div> -->
         </div>
      
 
