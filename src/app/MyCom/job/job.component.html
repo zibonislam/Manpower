@@ -1,0 +1,32 @@
+<body style="margin-left: 250px;">
+   <h1>Job Post Form</h1>
+
+   <form [formGroup]="addjob" (ngSubmit)="create()">
+
+      <input  type="text" name="JobTitle" placeholder="Job Title" formControlName="jobtitle" required="">
+  
+      <input  type="text" name="Companyname" placeholder="Company Name" formControlName="companyname" required="">
+
+      <input  type="text" name="JobContex" placeholder="Job Context" formControlName="jobcontext" required="" >
+
+      <input  type="text" name="Responsibilities" placeholder="Job Responsibilities" formControlName="responsibilities" required="" >
+
+      <input  type="text" name="JobStatus" placeholder="Job Status" formControlName="status" required="" >
+
+      <input  type="text" name="JobRequirements" placeholder="Job Requirements" formControlName="requirements" required="" >
+
+      <input  type="text" name="JobExperience" placeholder="Job Experience" formControlName="experience" required="" >
+
+      <input  type="text" name="Salary" placeholder="Salary Range" formControlName="salary" required="" >
+
+
+
+      <div>
+         <button class="btn btn-success"  value="create">Create</button>
+       </div>
+
+
+
+
+   </form>
+</body>

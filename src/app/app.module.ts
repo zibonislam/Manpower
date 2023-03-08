@@ -39,6 +39,8 @@ import { AdverificationComponent } from './MyCom/adverification/adverification.c
 import { AdverifyupdateComponent } from './MyCom/adverifyupdate/adverifyupdate.component';
 import { PaymentComponent } from './MyCom/payment/payment.component';
 import { AdpaymentComponent } from './MyCom/adpayment/adpayment.component';
+import { JobComponent } from './MyCom/job/job.component';
+import { JobofferComponent } from './MyCom/joboffer/joboffer.component';
 
 
 @NgModule({
@@ -77,7 +79,9 @@ import { AdpaymentComponent } from './MyCom/adpayment/adpayment.component';
     AdverificationComponent,
     AdverifyupdateComponent,
     PaymentComponent,
-    AdpaymentComponent
+    AdpaymentComponent,
+    JobComponent,
+    JobofferComponent
     
   ],
   imports: [

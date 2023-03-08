@@ -1,0 +1,45 @@
+<body style="margin-left:250px ;">
+    <div class="container">
+        
+        <!-- <a href="#" routerLink="/post/create/" class="btn btn-success">Create New Post</a> -->
+          
+        <table class="table table-striped">
+            <thead>
+                  <tr>
+                  
+                    <th>Job Title</th>
+                    <th>Company Name</th>
+                    <th>Job Context</th>
+                    <th>Responsibilities</th>
+                    <th>Status</th>
+                    <th>Requirements</th>
+                    <th>Experience</th>
+                    <th>Salary</th>
+
+                    <!-- <th>Body</th> -->
+                    <th width="250px">Action</th>
+                  </tr>
+            </thead>
+            <tbody>
+                  <tr *ngFor="let job of jobs">
+                  
+                    <td>{{ job.jobtitle}}</td>
+                    <td>{{ job.companyname}}</td>
+                    <td>{{ job.jobcontext }}</td>
+                    <td>{{ job.responsibilities }}</td>
+                    <td>{{ job.status }}</td>
+                    <td>{{ job.requirements}}</td>
+                    <td>{{ job.experience }}</td>
+                    <td>{{ job.salary }}</td>
+
+                    <!-- <td> -->
+                      <!-- <a routerLink="/admin/aaadmission" class="btn btn-info">Accept</a> -->
+                      <!-- <button class="btn btn-primary" [routerLink]="['/admin/','aaadmission', post.id]">Edit</button> -->
+
+                      <!-- <a href="#" [routerLink]="['/post/', post.id, 'edit']" class="btn btn-primary">Edit</a> -->
+                      <!-- <button type="button" (click)="deleteTrainee(post.id)" class="btn btn-danger">Delete</button>
+                    </td> -->
+                  </tr>
+            </tbody>
+        </table>
+     </div>

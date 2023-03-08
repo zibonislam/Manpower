@@ -13,6 +13,8 @@ import { ForeignComponent } from './MyCom/foreign/foreign.component';
 import { GovtComponent } from './MyCom/govt/govt.component';
 import { HeadhuntComponent } from './MyCom/headhunt/headhunt.component';
 import { HomeComponent } from './MyCom/home/home.component';
+import { JobComponent } from './MyCom/job/job.component';
+import { JobofferComponent } from './MyCom/joboffer/joboffer.component';
 import { LoginComponent } from './MyCom/login/login.component';
 import { OperationComponent } from './MyCom/operation/operation.component';
 import { PaymentComponent } from './MyCom/payment/payment.component';
@@ -63,6 +65,7 @@ const routes: Routes = [
   {path:"post/index", component:AadmissionComponent},
   {path:"operation", component:OperationComponent},
   {path:"payment/index", component:PaymentComponent},
+  {path:"joboffer", component:JobofferComponent},
   {path:"admin", component:AdminComponent,
     children:[
       {path:"aadmission", component:AadmissionComponent},
@@ -72,7 +75,8 @@ const routes: Routes = [
       {path:"aaadmission/:postId", component: AaadmissionComponent},
       {path:"adverification", component: AdverificationComponent},
       {path:"adverifyupdate/:traineeId", component: AdverifyupdateComponent},
-      {path:"adpayment", component:AdpaymentComponent}
+      {path:"adpayment", component:AdpaymentComponent},
+      {path:"job", component:JobComponent}
     ]
   }
 
