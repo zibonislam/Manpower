@@ -30,7 +30,7 @@ export class JobService {
    */
   getAll(): Observable<any> {
   
-    return this.httpClient.get(this.apiURL + '/get')
+    return this.httpClient.get(this.apiURL + '/posts')
   
     .pipe(
       catchError(this.errorHandler)
@@ -44,7 +44,7 @@ export class JobService {
    */
   create(posts:Job): Observable<any> {
   
-    return this.httpClient.post(this.apiURL + '/post/', JSON.stringify(posts), this.httpOptions)
+    return this.httpClient.post(this.apiURL + '/posts', JSON.stringify(posts), this.httpOptions)
   
     .pipe(
       catchError(this.errorHandler)
@@ -58,7 +58,7 @@ export class JobService {
    */
   find(id:number): Observable<any> {
   
-    return this.httpClient.get(this.apiURL + '/put/' + id)
+    return this.httpClient.get(this.apiURL + '/posts/' + id)
   
     .pipe(
       catchError(this.errorHandler)
@@ -72,7 +72,7 @@ export class JobService {
    */
   update(id:number, post:Job): Observable<any> {
   
-    return this.httpClient.put(this.apiURL + '/get/' + id, JSON.stringify(post), this.httpOptions)
+    return this.httpClient.put(this.apiURL + '/posts/' + id, JSON.stringify(post), this.httpOptions)
  
     .pipe( 
       catchError(this.errorHandler)
@@ -85,7 +85,7 @@ export class JobService {
    * @return response()
    */
   delete(id:number){
-    return this.httpClient.delete(this.apiURL + '/delete/' + id, this.httpOptions)
+    return this.httpClient.delete(this.apiURL + '/posts/' + id, this.httpOptions)
   
     .pipe(
       catchError(this.errorHandler)
@@ -108,7 +108,7 @@ export class JobService {
  }
  getById(id:number): Observable<any> {
   
-  return this.httpClient.get(this.apiURL + '/get/'  + id)
+  return this.httpClient.get(this.apiURL + '/posts/'  + id)
 
   .pipe(
     catchError(this.errorHandler)

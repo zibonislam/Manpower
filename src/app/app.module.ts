@@ -41,6 +41,7 @@ import { PaymentComponent } from './MyCom/payment/payment.component';
 import { AdpaymentComponent } from './MyCom/adpayment/adpayment.component';
 import { JobComponent } from './MyCom/job/job.component';
 import { JobofferComponent } from './MyCom/joboffer/joboffer.component';
+import { CvComponent } from './MyCom/cv/cv.component';
 
 
 @NgModule({
@@ -81,7 +82,8 @@ import { JobofferComponent } from './MyCom/joboffer/joboffer.component';
     PaymentComponent,
     AdpaymentComponent,
     JobComponent,
-    JobofferComponent
+    JobofferComponent,
+    CvComponent
     
   ],
   imports: [

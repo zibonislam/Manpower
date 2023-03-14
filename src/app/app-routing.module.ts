@@ -8,6 +8,7 @@ import { AdpaymentComponent } from './MyCom/adpayment/adpayment.component';
 import { AdverificationComponent } from './MyCom/adverification/adverification.component';
 import { AdverifyupdateComponent } from './MyCom/adverifyupdate/adverifyupdate.component';
 import { CorporateComponent } from './MyCom/corporate/corporate.component';
+import { CvComponent } from './MyCom/cv/cv.component';
 import { DepartmentComponent } from './MyCom/department/department.component';
 import { ForeignComponent } from './MyCom/foreign/foreign.component';
 import { GovtComponent } from './MyCom/govt/govt.component';
@@ -66,6 +67,7 @@ const routes: Routes = [
   {path:"operation", component:OperationComponent},
   {path:"payment/index", component:PaymentComponent},
   {path:"joboffer", component:JobofferComponent},
+  {path:"cv", component:CvComponent},
   {path:"admin", component:AdminComponent,
     children:[
       {path:"aadmission", component:AadmissionComponent},

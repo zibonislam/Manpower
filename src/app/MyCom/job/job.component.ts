@@ -38,7 +38,11 @@ export class JobComponent implements OnInit{
 
   create(){
     Swal.fire('Success!', 'Your request has been processed.', 'success');
-    console.log(this.addjob.value)
+    console.log(this.addjob.value);
+    this.jobservice.create(this.addjob.value).subscribe((res:any) => {
+      console.log('Post created successfully!');
+     //  this.router.navigateByUrl('post/index');
+ })
     
   }
 
